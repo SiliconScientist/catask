@@ -214,3 +214,6 @@ __marimo__/
 
 # Configuration files
 config.toml
+
+# Data files
+data/
