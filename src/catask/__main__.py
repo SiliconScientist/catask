@@ -7,10 +7,7 @@ from catask.atom_utils import remove_via_tags
 def main():
     cfg = get_config()
     atoms_list = read("data/oc22_ooh.extxyz", index=":")
-    bare_surfaces = []
-    for atoms in atoms_list:
-        atoms = remove_via_tags(atoms, adsorbate_tag=2)
-        bare_surfaces.append(atoms)
+    bare_surfaces = [remove_via_tags(atoms) for atoms in atoms_list]
     write("data/oc22_ooh_bare.extxyz", bare_surfaces)
 
 
